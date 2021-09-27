@@ -1,0 +1,188 @@
+
+*** Running vivado
+    with args -log top_sim.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_sim.tcl
+
+
+
+****** Vivado v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source top_sim.tcl -notrace
+Command: synth_design -top top_sim -part xc7a12ticsg325-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2552
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1120.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_sim' [C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/top_sim.vhd:9]
+WARNING: [Synth 8-5640] Port 'cin' is missing in component declaration [C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/top_sim.vhd:11]
+WARNING: [Synth 8-5640] Port 'cout' is missing in component declaration [C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/top_sim.vhd:11]
+INFO: [Synth 8-3491] module 'Adder_4bit' declared at 'C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/EX_1.srcs/sources_1/new/Adder_4bit.vhd:34' bound to instance 'dut' of component 'Adder_4bit' [C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/top_sim.vhd:24]
+INFO: [Synth 8-638] synthesizing module 'Adder_4bit' [C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/EX_1.srcs/sources_1/new/Adder_4bit.vhd:42]
+INFO: [Synth 8-3491] module 'Full_adder' declared at 'C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/EX_1.srcs/sources_1/new/Full_adder.vhd:34' bound to instance 'fa0_inst' of component 'Full_adder' [C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/EX_1.srcs/sources_1/new/Adder_4bit.vhd:54]
+INFO: [Synth 8-638] synthesizing module 'Full_adder' [C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/EX_1.srcs/sources_1/new/Full_adder.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'Full_adder' (1#1) [C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/EX_1.srcs/sources_1/new/Full_adder.vhd:42]
+INFO: [Synth 8-3491] module 'Full_adder' declared at 'C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/EX_1.srcs/sources_1/new/Full_adder.vhd:34' bound to instance 'fa1_inst' of component 'Full_adder' [C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/EX_1.srcs/sources_1/new/Adder_4bit.vhd:55]
+INFO: [Synth 8-3491] module 'Full_adder' declared at 'C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/EX_1.srcs/sources_1/new/Full_adder.vhd:34' bound to instance 'fa2_inst' of component 'Full_adder' [C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/EX_1.srcs/sources_1/new/Adder_4bit.vhd:56]
+INFO: [Synth 8-3491] module 'Full_adder' declared at 'C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/EX_1.srcs/sources_1/new/Full_adder.vhd:34' bound to instance 'fa3_inst' of component 'Full_adder' [C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/EX_1.srcs/sources_1/new/Adder_4bit.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'Adder_4bit' (2#1) [C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/EX_1.srcs/sources_1/new/Adder_4bit.vhd:42]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/top_sim.vhd:36]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/top_sim.vhd:38]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/top_sim.vhd:48]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/top_sim.vhd:50]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/top_sim.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'top_sim' (3#1) [C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/top_sim.vhd:9]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1120.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1120.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a12ticsg325-1L
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a12ticsg325-1L
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1120.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1120.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 12    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 40 (col length:40)
+BRAMs: 40 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1120.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1120.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1120.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1120.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1120.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1120.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1120.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1120.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1120.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1120.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1120.105 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1120.105 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1120.105 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1120.105 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: eaecca07
+INFO: [Common 17-83] Releasing license: Synthesis
+21 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 1120.105 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/EX1/EX_1.runs/synth_1/top_sim.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_sim_utilization_synth.rpt -pb top_sim_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 27 12:46:59 2021...
