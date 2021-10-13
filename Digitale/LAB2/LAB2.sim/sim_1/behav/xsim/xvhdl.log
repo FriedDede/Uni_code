@@ -1,0 +1,6 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/LAB2/LAB2.srcs/sources_1/new/ShiftRegisterSIPO.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ShiftRegisterSIPO'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/LAB2/ff_d.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ff_d'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/LAB2/LAB2.srcs/sources_1/new/top_sim.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top_sim'
