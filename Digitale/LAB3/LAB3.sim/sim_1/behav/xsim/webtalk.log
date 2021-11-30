@@ -1,14 +1,13 @@
 #-----------------------------------------------------------
 # Webtalk v2021.1 (64-bit)
-# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Thu Oct 14 15:38:21 2021
-# Process ID: 14380
-# Current directory: C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/LAB3/LAB3.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/LAB3/LAB3.sim/sim_1/behav/xsim/xsim.dir/top_sim_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/LAB3/LAB3.sim/sim_1/behav/xsim/webtalk.log
-# Journal file: C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/LAB3/LAB3.sim/sim_1/behav/xsim\webtalk.jou
+# Start of session at: Wed Nov 24 17:30:09 2021
+# Process ID: 107070
+# Current directory: /home/andre/src/Uni_code/Digitale/LAB3/LAB3.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/andre/src/Uni_code/Digitale/LAB3/LAB3.sim/sim_1/behav/xsim/xsim.dir/top_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/andre/src/Uni_code/Digitale/LAB3/LAB3.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/andre/src/Uni_code/Digitale/LAB3/LAB3.sim/sim_1/behav/xsim/webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/LAB3/LAB3.sim/sim_1/behav/xsim/xsim.dir/top_sim_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'C:/Users/Andrea/source/repos/Andrea759/Uni_code/Digitale/LAB3/LAB3.sim/sim_1/behav/xsim/xsim.dir/top_sim_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Oct 14 15:38:25 2021. For additional details about this file, please refer to the WebTalk help file at C:/Users/Andrea/Xilinx/Vivado/2021.1/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Thu Oct 14 15:38:25 2021...
+source /home/andre/src/Uni_code/Digitale/LAB3/LAB3.sim/sim_1/behav/xsim/xsim.dir/top_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Nov 24 17:30:10 2021...
