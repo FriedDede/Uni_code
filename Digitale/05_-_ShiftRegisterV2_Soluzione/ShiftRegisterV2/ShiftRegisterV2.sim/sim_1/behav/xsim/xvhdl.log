@@ -1,4 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/andre/src/Uni_code/Digitale/05_-_ShiftRegisterV2_Soluzione/ShiftRegisterV2/ShiftRegisterV2.srcs/sources_1/new/ShiftRegisterSIPOv2.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'ShiftRegisterSIPOv2'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/andre/src/Uni_code/Digitale/05_-_ShiftRegisterV2_Soluzione/ShiftRegisterV2/ShiftRegisterV2.srcs/sim_1/imports/new/top_sim.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'top_sim'

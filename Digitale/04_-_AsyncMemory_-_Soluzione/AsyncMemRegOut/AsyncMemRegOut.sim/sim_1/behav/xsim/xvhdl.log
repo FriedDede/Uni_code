@@ -1,4 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/fabio/Downloads/AsyncMemRegOut/AsyncMemRegOut.srcs/sources_1/new/MyMemory.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity MyMemory
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/fabio/Downloads/AsyncMemRegOut/AsyncMemRegOut.srcs/sim_1/new/top_sim.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity top_sim
