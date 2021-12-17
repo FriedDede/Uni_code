@@ -36,7 +36,9 @@ t = 0 :dt:Toss;
     xf = conv2(x,h_fir1(:),'same');
     subplot(4,1,2), plot(t,abs(xf)), grid
     xlabel('tempo [s]'), title('abs(x)')
-
+    
+    %soundsc(xf,Fs);
+    %soundsc(yf,Fs);
 %% Richiesta 3: Estrazione x e y con errore di fase dteta +-pi
     eteta = rand*(2*pi)-pi;
 
@@ -92,68 +94,34 @@ t = 0 :dt:Toss;
     %max = max(Swf);
     %f0_mean = f(Swf == max)
 
-%% Phase Detector - from reference correctly demodulated, unfiltered signals
-    x_ref = x(1 : 100);
-    y_ref = y(1 : 100);
-    s_ref = s(1 : 100);
-    t_ref = t(1 : 100);
-    T_oss_ref = t(100);
-    df_ref = 1/(20*T_oss_ref);
-    f_ref = -Fs/2 : df_ref : (Fs/2)-df_ref;
-    
-    cos_ref = x_ref./s_ref/2;
-    sin_ref = -y_ref./s_ref/2;
-    teta_dect_unfiltered = asin(sin_ref(1))
-    acos(cos_ref());
-    COS_ref = fft(cos_ref',size(f_ref,2),1);
-    %figure;
-    %subplot(3,1,1), plot(f_ref,abs(COS_ref));
-    %xlabel('f [Hz]'), title('COS ref(f)');
-    %subplot(3,1,2), plot(t_ref,cos_ref);
-    %xlabel('t [dt]'), title('cos ref(t)');
-    %subplot(3,1,3), plot(f_ref,angle(COS_ref));
-    %xlabel('rad'), title('angle COS_ref(rad)');
-%% Frequency detector - from signal
-    %figure;
-    S_pos = PSD(length(f)/2 : length(f));
-    f_pos = f(length(f)/2 : length(f));
-    %PSD_pos = 1/Toss*abs(S_pos).^2;
-    %subplot(2,1,1), plot(f_pos,PSD_pos), grid;
-    %xlabel('f [Hz]'), title('PSD-ch1 positiva(f)');
-    f0_dec = sum(abs(S_pos).*abs(f_pos))/sum(abs(S_pos))
-    
-    S_pos = S2(length(f)/2 : length(f))';
-    %PSD_pos = 1/Toss*abs(S_pos).^2;
-    %subplot(2,1,2), plot(f_pos,PSD_pos), grid;
-    %xlabel('f [Hz]'), title('PSD-ch2 positiva(f)');
-    f0_dec = (f0_dec+sum(abs(S_pos).*abs(f_pos))/sum(abs(S_pos)))/2
-    %fase_dec = angle(S_pos((f0_dec-mod(f0_dec,df))/df))
-    
 %% PSDs
-    S1 = fftshift(fft(s(:, 1), length(f)))*df; %Trasformata primo canale
-    Y1 = fftshift(fft(y(:, 1), length(f)))*df; %Trasformata secondo canale
-    YF1 = fftshift(fft(yf(:, 1), length(f)))*df; %Trasformata primo canale
+    S1 = fftshift(fft(s(:, 1), length(f)))*dt; %Trasformata primo canale
+    XF1 = fftshift(fft(x(:, 1), length(f)))*dt; %Trasformata secondo canale
+    YF1 = fftshift(fft(y(:, 1), length(f)))*dt; %Trasformata primo canale
     figure;
     subplot(3,1,1), plot(f,1/Toss*abs(S1).^2), grid
-    xlabel('f Hz]'), title('S-canale1-FFT')
-    subplot(3,1,2), plot(f,1/Toss*abs(Y1).^2), grid
-    xlabel('f [Hz]'), title('Y-canale1-FFT')
+    xlabel('f Hz]'), title('S-canale1-PSD')
+    subplot(3,1,2), plot(f,1/Toss*abs(XF1).^2), grid
+    xlabel('f [Hz]'), title('XF1-canale1-PSD')
     subplot(3,1,3), plot(f,1/Toss*abs(YF1).^2), grid
-    xlabel('f [Hz]'), title('YF1-canale1-FFT')
+    xlabel('f [Hz]'), title('YF1-canale1-PSD')
     
-    Yfreq = fftshift(fft(ydfreq(:, 1), length(f)))*df; %Trasformata primo canale
-    Yteta = fftshift(fft(ydteta(:, 1), length(f)))*df; %Trasformata secondo canale
+    Yfreq = fftshift(fft(ydfreq(:, 1), length(f)))*dt; %Trasformata primo canale
+    Yteta = fftshift(fft(ydteta(:, 1), length(f)))*dt; %Trasformata secondo canale
     figure;
     subplot(3,1,1), plot(f,1/Toss*abs(Y1).^2), grid
-    xlabel('f Hz]'), title('Y-canale1-FFT')
+    xlabel('f Hz]'), title('Y-canale1-PSD')
     subplot(3,1,2), plot(f,1/Toss*abs(Yteta).^2), grid
-    xlabel('f [Hz]'), title('Ydteta-canale1-FFT')
+    xlabel('f [Hz]'), title('Ydteta-canale1-PSD')
     subplot(3,1,3), plot(f,1/Toss*abs(Yfreq).^2), grid
-    xlabel('f [Hz]'), title('Ydfreq-canale1-FFT')
+    xlabel('f [Hz]'), title('Ydfreq-canale1-PSD')
     
 %%  Richiesta 5:
-    figure;
-    s_ref = s(1 : 100);
+%    figure;
+%    s_ref = s(1 : 100);
+%    t_ref = t(1 : 100);
+    f_ref = f;
+    df_ref = df;
     xdemod = s_ref.*2.*cos(2*pi*(f0+ef)*t_ref+teta+eteta);
     ydemod = s_ref.*2.*sin(2*pi*(f0+ef)*t_ref+teta+eteta);
     x_ref = xf(1 : 100)';
@@ -172,13 +140,3 @@ t = 0 :dt:Toss;
     xlabel('f [Hz]'), title('S(ref,ref)')
     subplot(2,2,4), plot(t_ref,abs(R_ref)), grid
     xlabel('t [sec]'), title('R(ref,ref)')
-%% 
-   figure;
-   Xdteta = (fft(xdteta(:, 1), length(f)))*df;
-   S=Yteta.*conj(Xdteta);
-   R=ifft(S,length(t));
-   %plot(f,S)
-    
-%%
-    figure;
-    plot(f,2*real(S)+2*imag(S))
