@@ -1,0 +1,4 @@
+main
+	__CC2DW
+interrupt
+	timer_add

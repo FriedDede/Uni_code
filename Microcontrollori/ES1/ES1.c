@@ -1,9 +1,6 @@
 void main(){
-	TRISA = 0b11111110;
-	ANSELD = 0b00000000;
-	TRISD = 0b11111111;
-
-	LATA.RA0 = 1;
+	TRISD = 0b00000000;
+	LATD = 0b00000001;
 	while (1)
 	{
 		if(PORTD.RD0 == 1) LATA.RA0 = 1;
