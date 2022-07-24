@@ -42,7 +42,7 @@ void main() {
     CCP1CON.CCP1M1 = 0;
     CCP1CON.CCP1M0 = 1;
     // timer 1 setup
-    T1CON = 0b01110011;
+    T1CON = 0b011100011;
 
     TRISD = 0;
     ANSELC.RC2 = 0;

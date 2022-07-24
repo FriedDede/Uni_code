@@ -42,7 +42,7 @@ void main() {
     //      Out to prevent spikes during PWM init
     // - Output will be reenabled after initialization
     TRISE.RE2 = 1;
-    // --- TMR2 - CCP5 ---
+    // --- TMR4 - CCP5 ---
     CCPTMRS1.C5TSEL1 = 0;
     CCPTMRS1.C5TSEL0 = 1;
     // --- Set Period ----
@@ -54,7 +54,7 @@ void main() {
     //CCP5CON.CCP5M3 = 1;
     //CCP5CON.CCP5M2 = 1;
     // ---- Set Ton ------
-    // duty_cycle = CCPR5L /(PR2 +1)
+    // duty_cycle = CCPR5L /(PR4 +1)
     CCPR5L = 0;
     // ---- Set TMR2 -----
     // bit 5: TMR2 ON
